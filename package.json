@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ThiagoSilvaMorato/04-clean-ddd#readme",
   "devDependencies": {
     "@types/node": "^20.11.16",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.2"
   }
 }
