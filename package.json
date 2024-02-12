@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/ThiagoSilvaMorato/04-clean-ddd#readme",
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "@rocketseat/eslint-config": "^2.2.2",
     "@types/node": "^20.11.16",
     "eslint-plugin-vitest-globals": "^1.4.0",
