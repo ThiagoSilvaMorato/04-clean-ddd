@@ -1,7 +1,7 @@
-import { QuestionAttachmentRepository } from "@/domain/forum/application/repositories/question-attachments-repository";
+import { QuestionAttachmentsRepository } from "@/domain/forum/application/repositories/question-attachments-repository";
 import { QuestionAttachment } from "@/domain/forum/enterprise/entities/question-attachment";
 
-export class InMemoryQuestionAttachmentsRepository implements QuestionAttachmentRepository {
+export class InMemoryQuestionAttachmentsRepository implements QuestionAttachmentsRepository {
   public items: QuestionAttachment[] = [];
 
   async findManyByQuestionId(questionId: string) {
@@ -10,5 +10,13 @@ export class InMemoryQuestionAttachmentsRepository implements QuestionAttachment
     );
 
     return questionAttachments;
+  }
+
+  async deleteManyByQuestionId(questionId: string) {
+    const questionAttachments = this.items.filter(
+      (item) => item.questionId.toString() !== questionId
+    );
+
+    this.items = questionAttachments;
   }
 }
